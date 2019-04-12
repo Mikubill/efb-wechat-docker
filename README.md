@@ -22,7 +22,7 @@ cd efb-wechat-docker && docker build -t mikubill/efbwechat .
 * step 1
 
 ```
-docker run -d -t --name "efbwechat" -e TOKEN={} -e ADMIN={} mikubill/efbwechat
+docker run -d -t --name "efbwechat" -e TOKEN=xxxx -e ADMIN=xxxx mikubill/efbwechat
 ```
 
 TOKEN: Telegram Bot Token (@botfather)
