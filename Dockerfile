@@ -10,5 +10,5 @@ RUN apk --no-cache --virtual build add sed build-base libffi-dev openssl-dev &&\
     rm -rf ~/.cache &&\
     apk del build  &&\
     chmod +x /opt/app/init.sh
-VOLUME /opt/app/ehforward_config/profiles/${PROFILE}/blueset.telegram/tadata.db
+VOLUME /opt/app/ehforward_config/profiles/${PROFILE}/blueset.telegram
 ENTRYPOINT ["sh", "/opt/app/init.sh"]
