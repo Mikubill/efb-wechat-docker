@@ -45,6 +45,7 @@ jobs:
           file: ./Dockerfile
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ env.IMAGE_NAME }}:latest
+          platforms: linux/arm/v7,linux/arm64/v8,linux/386,linux/amd64,linux/arm64
 
   build-ghcr:
     env:
@@ -103,6 +104,7 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          platforms: linux/arm/v7,linux/arm64/v8,linux/386,linux/amd64,linux/arm64
 
       # Sign the resulting Docker image digest except on PRs.
       # This will only write to the public Rekor transparency log when the Docker
